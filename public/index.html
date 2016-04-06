@@ -5,12 +5,12 @@
     <title>Angular App</title>
   </head>
   <body ng-app="myApp">
-    <main>
-      <h1 ng-controller="titleCtrl as title">H1 {{title.title}}</h1>
-      <h1 ng-init="expression = 'Change Me'">{{expression}}</h1>
+    <main ng-controller="appCtrl as app">
+      <h1>{{app.title}}</h1>
+      <h2>Change Title:</h2>
       <p>
-        Change Title Expression:
-        <input ng-model="expression">
+        <input ng-model="app.title">
+        <button ng-click="app.del()">Delete Title</button>
       </p>
     </main>
 
